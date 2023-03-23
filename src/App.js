@@ -1,10 +1,18 @@
 import './App.css';
+import styled from 'styled-components';
+import Header from './component/Header';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <StyledApp>
+      <Header></Header>
+    </StyledApp>
   );
 }
 
+const StyledApp = styled.div`
+  margin: 0 auto;
+  width: 1240px;
+  position: relative;
+`;
 export default App;
