@@ -76,6 +76,7 @@ const StyledHeader = styled.div`
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 1;
 `;
 
 const StyledNav = styled.div`
