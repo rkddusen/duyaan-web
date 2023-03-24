@@ -7,6 +7,7 @@ function About() {
       <AboutTitle>
         <Title>About</Title>
       </AboutTitle>
+      <AboutContent>
       <div>
         <OneSentence>'Artistic Developer'</OneSentence>
       </div>
@@ -28,6 +29,7 @@ function About() {
           <p></p>
         </BoxExplain>
       </Box>
+      </AboutContent>
     </StyledAbout>
   );
 }
@@ -43,6 +45,10 @@ const Title = styled.p`
   text-align: center;
   font-size: 40px;
 `;
+const AboutContent = styled.div`
+  width: 100%;
+  padding-bottom: 100px;
+`;
 const OneSentence = styled.div`
   font-size: 30px;
 `;
@@ -50,7 +56,6 @@ const Box = styled.div`
   margin-top: 30px;
   display: flex;
   justify-content: start;
-  padding-bottom: 100px;
 `;
 const BoxExplain = styled.div`
   border: 1px solid black;
