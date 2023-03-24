@@ -4,7 +4,7 @@ import SNS from './SNS';
 
 function Contact() {
   return (
-    <StyledContact>
+    <StyledContact id='contact'>
       <ContactTitle>
         <Title>Contact</Title>
       </ContactTitle>
@@ -25,7 +25,7 @@ const StyledContact = styled.div`
   background-color: #f5f5f5;
 `;
 const ContactTitle = styled.div`
-  padding: 100px 0;
+  padding: 120px 0;
 `;
 const Title = styled.p`
   text-align: center;

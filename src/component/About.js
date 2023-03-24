@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 function About() {
   return (
-    <StyledAbout>
+    <StyledAbout id='about'>
       <AboutTitle>
         <Title>About</Title>
       </AboutTitle>
@@ -39,7 +39,7 @@ const StyledAbout = styled.div`
   background-color: #f5f5f5;
 `;
 const AboutTitle = styled.div`
-  padding: 100px 0;
+  padding: 120px 0;
 `;
 const Title = styled.p`
   text-align: center;

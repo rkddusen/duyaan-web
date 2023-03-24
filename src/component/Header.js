@@ -51,13 +51,13 @@ function Header() {
     <StyledHeader>
       <StyledNav>
         <div>
-          <img height="35px" src="./images/logo.png" />
+          <NavImg src="./images/logo.png" onClick={() => window.location.reload()} />
         </div>
         <NavRight>
           <NavUl>
-            <NavLi>About</NavLi>
-            <NavLi>Projects</NavLi>
-            <NavLi>Contact</NavLi>
+            <NavLi onClick={()=>window.location.replace('#about')}>About</NavLi>
+            <NavLi onClick={()=>window.location.replace('#projects')}>Projects</NavLi>
+            <NavLi onClick={()=>window.location.replace('#contact')}>Contact</NavLi>
           </NavUl>
           <NavDark>
             <DarkToggle>
@@ -77,15 +77,22 @@ const StyledHeader = styled.div`
   top: 0;
   width: 100%;
   z-index: 1;
+  background-color: white;
 `;
 
 const StyledNav = styled.div`
   width: 1240px;
-  height: 80px;
+  height: 100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+const NavImg = styled.img`
+  height: 35px;
+  &:hover{
+    cursor: pointer;
+  }
 `;
 const NavRight = styled.div`
   display: flex;
@@ -98,6 +105,10 @@ const NavUl = styled.ul`
 const NavLi = styled.li`
   margin-left: 50px;
   font-size: 23px;
+
+  &:hover{
+    cursor: pointer;
+  }
 `;
 const NavDark = styled.div`
   margin-left: 100px;
