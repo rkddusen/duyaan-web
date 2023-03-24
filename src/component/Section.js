@@ -21,7 +21,6 @@ function Section() {
 }
 const StyledSection = styled.div`
   width: 100%;
-  height: 10000px;
 `;
 const StyledArticle = styled.div`
   position: relative;
