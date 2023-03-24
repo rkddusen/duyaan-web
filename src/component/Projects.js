@@ -4,7 +4,7 @@ import Project from './Project';
 
 function Projects() {
   return (
-    <StyledProjects>
+    <StyledProjects id='projects'>
       <ProjectsTitle>
         <Title>Projects</Title>
       </ProjectsTitle>
@@ -27,7 +27,7 @@ const StyledProjects = styled.div`
   background-color: #f1f1f1;
 `;
 const ProjectsTitle = styled.div`
-  padding: 100px 0;
+  padding: 120px 0;
 `;
 const Title = styled.p`
   text-align: center;
