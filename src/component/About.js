@@ -3,9 +3,58 @@ import styled from 'styled-components';
 
 function About() {
   return (
-    <div>
-
-    </div>
+    <StyledAbout>
+      <AboutTitle>
+        <Title>About</Title>
+      </AboutTitle>
+      <div>
+        <OneSentence>'Artistic Developer'</OneSentence>
+      </div>
+      <Box>
+        <img src='' alt='profile 이미지' width="300px" height="300px" style={{marginRight: "30px"}}/>
+        <BoxExplain>
+          <p>이름 : 강두연</p>
+        </BoxExplain>
+      </Box>
+      <Box>
+        <BoxExplain>
+          <p></p>
+        </BoxExplain>
+        <img src='' alt='career 이미지' width="300px" height="300px" style={{marginLeft: "30px"}}/>
+      </Box>
+      <Box>
+        <img src='' alt='skills 이미지' width="300px" height="300px" style={{marginRight: "30px"}}/>
+        <BoxExplain>
+          <p></p>
+        </BoxExplain>
+      </Box>
+    </StyledAbout>
   );
 }
+
+const StyledAbout = styled.div`
+  width: 100%;
+  background-color: #f5f5f5;
+`;
+const AboutTitle = styled.div`
+  padding: 100px 0;
+`;
+const Title = styled.p`
+  text-align: center;
+  font-size: 40px;
+`;
+const OneSentence = styled.div`
+  font-size: 30px;
+`;
+const Box = styled.div`
+  margin-top: 30px;
+  display: flex;
+  justify-content: start;
+  padding-bottom: 100px;
+`;
+const BoxExplain = styled.div`
+  border: 1px solid black;
+  width: 100%;
+  padding: 20px;
+`;
 export default About;
