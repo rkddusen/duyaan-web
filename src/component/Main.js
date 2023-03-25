@@ -53,6 +53,7 @@ const Sentence = styled.p`
   font-size: 80px;
   line-height: 1.5;
   letter-spacing: 10px;
+  font-weight: 500;
 `;
 
 export default Main;
