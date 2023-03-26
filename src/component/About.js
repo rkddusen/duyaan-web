@@ -1,6 +1,46 @@
 import React from "react";
 import styled from 'styled-components';
 
+export function Career(props){
+  const { date, text } = props;
+  return(
+    <>
+      <Date>{date}</Date>{text}
+    </>
+  );
+}
+const Date = styled.span`
+  min-width: 150px;
+`;
+
+export function Skills(props){
+  const { subject, value } = props;
+  return(
+    <>
+      <Subject>{subject}</Subject><StyledProgress value={value} max="100" />
+    </>
+  )
+}
+const Subject = styled.span`
+  min-width: 100px;
+`;
+const StyledProgress = styled.progress`
+  appearance: none;
+  width: 300px;
+  margin: 5px;
+
+  &::-webkit-progress-bar {
+    background: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 10px #ccc;
+  }
+  &::-webkit-progress-value {
+    border-radius: 5px;
+    background: -webkit-linear-gradient(to right, #888888, #333333);
+    background: linear-gradient(to right, #888888, #333333);
+  }
+`;
+
 function About() {
   return (
     <StyledAbout id='about'>
@@ -11,22 +51,40 @@ function About() {
       <div>
         <OneSentence>'Artistic Developer'</OneSentence>
       </div>
-      <Box>
-        <img src='' alt='profile 이미지' width="300px" height="300px" style={{marginRight: "30px"}}/>
+      <Box justify="start">
+        <BoxImg src='./images/profile.jpeg' alt='profile 이미지' width="300px" height="300px" style={{marginRight: "60px"}}/>
         <BoxExplain>
-          <p>이름 : 강두연</p>
+          <Boxtitle>Profile</Boxtitle>
+          <BoxDetail>이름 : 강두연</BoxDetail>
+          <BoxDetail>성별 : 남자</BoxDetail>
+          <BoxDetail>생년월일 : 1999.06.30</BoxDetail>
+          <BoxDetail>학력 : 건국대학교 재학 중</BoxDetail>
+          <BoxDetail>주소 : 경기도 성남시 분당구</BoxDetail>
+          <BoxDetail>좌우명 : </BoxDetail>
         </BoxExplain>
       </Box>
-      <Box>
+      <Box justify="end">
         <BoxExplain>
-          <p></p>
+          <Boxtitle>Career</Boxtitle>
+          <BoxDetail><Career date="2018.03" text="건국대학교 소프트웨어학과 입학" /></BoxDetail>
+          <BoxDetail><Career date="2019.03 - 2020.02" text="건국대학교 아마추어 오케스트라 동아리 16기 부회장" /></BoxDetail>
+          <BoxDetail><Career date="2019.07 - 2019.12" text="2019년 sw활동 장학1" /></BoxDetail>
+          <BoxDetail><Career date="2020.05 - 2021.11" text="육군 복무" /></BoxDetail>
+          <BoxDetail><Career date="2022.03 - 2022.12" text="2022년 sw활동 장학2" /></BoxDetail>
         </BoxExplain>
-        <img src='' alt='career 이미지' width="300px" height="300px" style={{marginLeft: "30px"}}/>
+        <BoxImg src='./images/career.png' alt='career 이미지' width="300px" height="300px" style={{marginLeft: "60px"}}/>
       </Box>
-      <Box>
-        <img src='' alt='skills 이미지' width="300px" height="300px" style={{marginRight: "30px"}}/>
+      <Box justify="start">
+        <BoxImg src='./images/skills.png' alt='skills 이미지' width="300px" height="300px" style={{marginRight: "60px"}}/>
         <BoxExplain>
-          <p></p>
+          <Boxtitle>Skills</Boxtitle>
+          <BoxDetail><Skills subject="Html, CSS" value={80} /></BoxDetail>
+          <BoxDetail><Skills subject="JavaScript" value={80} /></BoxDetail>
+          <BoxDetail><Skills subject="React" value={70} /></BoxDetail>
+          <BoxDetail><Skills subject="NodeJS" value={70} /></BoxDetail>
+          <BoxDetail><Skills subject="Java" value={50} /></BoxDetail>
+          <BoxDetail><Skills subject="Python" value={50} /></BoxDetail>
+          <BoxDetail><Skills subject="MySql" value={80} /></BoxDetail>
         </BoxExplain>
       </Box>
       </AboutContent>
@@ -36,7 +94,6 @@ function About() {
 
 const StyledAbout = styled.div`
   width: 100%;
-  background-color: #f5f5f5;
 `;
 const AboutTitle = styled.div`
   padding: 120px 0;
@@ -47,19 +104,33 @@ const Title = styled.p`
 `;
 const AboutContent = styled.div`
   width: 100%;
-  padding-bottom: 100px;
 `;
 const OneSentence = styled.div`
   font-size: 30px;
 `;
 const Box = styled.div`
-  margin-top: 30px;
+  margin: 50px 0 100px 0;
   display: flex;
-  justify-content: start;
+  justify-content: ${props => props.justify};
+`;
+const BoxImg = styled.img`
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgb(0,0,0,0.25);
 `;
 const BoxExplain = styled.div`
-  border: 1px solid black;
-  width: 100%;
   padding: 20px;
 `;
+const Boxtitle = styled.p`
+  font-size: 20px;
+  margin-bottom: 10px;
+`;
+const BoxDetail = styled.p`
+  margin: 10px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+`;
+
 export default About;
