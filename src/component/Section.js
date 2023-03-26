@@ -10,12 +10,10 @@ function Section() {
     <StyledSection>
       <StyledArticle>
         <Main></Main>
-      </StyledArticle>
-      <StyledContent>
         <About></About>
         <Projects></Projects>
         <Contact></Contact>
-      </StyledContent>
+      </StyledArticle>
     </StyledSection>
   );
 }
@@ -26,9 +24,5 @@ const StyledArticle = styled.div`
   position: relative;
   width: 100%;
 `;
-const StyledContent = styled.div`
-  position: relative;
-  width: 1240px;
-  margin: 0 auto;
-`;
+
 export default Section;

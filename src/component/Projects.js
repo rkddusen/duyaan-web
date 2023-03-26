@@ -5,6 +5,7 @@ import Project from './Project';
 function Projects() {
   return (
     <StyledProjects id='projects'>
+      <Article>
       <ProjectsTitle>
         <Title>Projects</Title>
       </ProjectsTitle>
@@ -18,13 +19,18 @@ function Projects() {
           <Project style={{bottom: "0", right: "0"}}></Project>
         </ProjectsList>
       </ProjectsContent>
+      </Article>
     </StyledProjects>
   );
 }
 
 const StyledProjects = styled.div`
   width: 100%;
-  background-color: #f1f1f1;
+  background-color: #fafafa;
+`;
+const Article = styled.div`
+  width: 1240px;
+  margin: 0 auto;
 `;
 const ProjectsTitle = styled.div`
   padding: 120px 0;

@@ -5,24 +5,29 @@ import SNS from './SNS';
 function Contact() {
   return (
     <StyledContact id='contact'>
-      <ContactTitle>
-        <Title>Contact</Title>
-      </ContactTitle>
-      <ContactContent>
-        <SNS></SNS>
-        <SNS></SNS>
-        <SNS></SNS>
-        <SNS></SNS>
-        <SNS></SNS>
-        <SNS></SNS>
-      </ContactContent>
+      <Article>
+        <ContactTitle>
+          <Title>Contact</Title>
+        </ContactTitle>
+        <ContactContent>
+          <SNS></SNS>
+          <SNS></SNS>
+          <SNS></SNS>
+          <SNS></SNS>
+          <SNS></SNS>
+          <SNS></SNS>
+        </ContactContent>
+      </Article>
     </StyledContact>
   );
 }
 
 const StyledContact = styled.div`
   width: 100%;
-  background-color: #f5f5f5;
+`;
+const Article = styled.div`
+  width: 1240px;
+  margin: 0 auto;
 `;
 const ContactTitle = styled.div`
   padding: 120px 0;

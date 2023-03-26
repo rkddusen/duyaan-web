@@ -44,6 +44,7 @@ const StyledProgress = styled.progress`
 function About() {
   return (
     <StyledAbout id='about'>
+      <Article>
       <AboutTitle>
         <Title>About</Title>
       </AboutTitle>
@@ -88,12 +89,17 @@ function About() {
         </BoxExplain>
       </Box>
       </AboutContent>
+      </Article>
     </StyledAbout>
   );
 }
 
 const StyledAbout = styled.div`
   width: 100%;
+`;
+const Article = styled.div`
+  width: 1240px;
+  margin: 0 auto;
 `;
 const AboutTitle = styled.div`
   padding: 120px 0;
