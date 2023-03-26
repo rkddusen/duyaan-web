@@ -11,12 +11,40 @@ function Projects() {
       </ProjectsTitle>
       <ProjectsContent>
         <ProjectsList>
-          <Project style={{top: "0", left: "0"}}></Project>
-          <Project style={{bottom: "0", right: "0"}}></Project>
+          <Project
+            style={{top: "0", left: "0"}}
+            img="./images/Kuphil_Web.png"
+            title="Kuphil Web"
+            explain="Kuphil Web 설명"
+            link="http://13.124.56.187:8080"
+            git=""
+          ></Project>
+          <Project
+            style={{bottom: "0", right: "0"}}  
+            img="./images/Color-me.png"
+            title="Color, me"
+            explain="Color, me 설명"
+            link="https://rkddusen.github.io/Color-me"
+            git="https://github.com/rkddusen/Color-me"
+          ></Project>
         </ProjectsList>
         <ProjectsList>
-          <Project style={{top: "0", left: "0"}}></Project>
-          <Project style={{bottom: "0", right: "0"}}></Project>
+          <Project
+            style={{top: "0", left: "0"}}
+            img="./images/todo-app.png"
+            title="TODOoO"
+            explain="TODOoO 설명"
+            link="https://rkddusen.github.io/todo-app"
+            git="https://github.com/rkddusen/todo-app"
+          ></Project>
+          <Project
+            style={{bottom: "0", right: "0"}}
+            img=""
+            title="Duyaan-Web"
+            explain="Duyaan-Web 설명"
+            link=""
+            git="https://github.com/rkddusen/duyaan-web"
+          ></Project>
         </ProjectsList>
       </ProjectsContent>
       </Article>
