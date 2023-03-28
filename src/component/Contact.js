@@ -5,24 +5,48 @@ import SNS from './SNS';
 function Contact() {
   return (
     <StyledContact id='contact'>
-      <ContactTitle>
-        <Title>Contact</Title>
-      </ContactTitle>
-      <ContactContent>
-        <SNS></SNS>
-        <SNS></SNS>
-        <SNS></SNS>
-        <SNS></SNS>
-        <SNS></SNS>
-        <SNS></SNS>
-      </ContactContent>
+      <Article>
+        <ContactTitle>
+          <Title>Contact</Title>
+        </ContactTitle>
+        <ContactContent>
+          <SNS
+            img="./images/naver_logo.png"
+            title="Naver"
+            content="Email : k99endus@naver.com"
+          ></SNS>
+          <SNS
+            img="./images/kakaotalk_logo.png"
+            title="Kakao"
+            link="https://open.kakao.com/o/sjXBWYre"
+          ></SNS>
+          <SNS
+            img="./images/tistory_logo.png"
+            title="Tistory"
+            link="https://duyaan.tistory.com"
+          ></SNS>
+          <SNS
+            img="./images/github_logo.png"
+            title="GitHub"
+            link="https://github.com/rkddusen"
+          ></SNS>
+          <SNS
+            img="./images/instagram_logo.png"
+            title="Instagram"
+            link="https://www.instagram.com/duyeon_0915"
+          ></SNS>
+        </ContactContent>
+      </Article>
     </StyledContact>
   );
 }
 
 const StyledContact = styled.div`
   width: 100%;
-  background-color: #f5f5f5;
+`;
+const Article = styled.div`
+  width: 1240px;
+  margin: 0 auto;
 `;
 const ContactTitle = styled.div`
   padding: 120px 0;
