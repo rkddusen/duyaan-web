@@ -11,7 +11,7 @@ function Project(props) {
       <ProjectExplain>
         <ProjectTitle>{title}</ProjectTitle>
         <p>{explain}</p>
-        <p>{link ? <a href={link} target="_blank">페이지 링크</a> : null}</p>
+        <p>{link ? <a href={link} target="_blank">바로 가기</a> : null}</p>
         <p>{git ? <a href={git} target="_blank">GitHub 링크</a> : null}</p>
       </ProjectExplain>
     </StyledProject>

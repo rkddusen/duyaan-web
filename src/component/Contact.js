@@ -10,12 +10,31 @@ function Contact() {
           <Title>Contact</Title>
         </ContactTitle>
         <ContactContent>
-          <SNS></SNS>
-          <SNS></SNS>
-          <SNS></SNS>
-          <SNS></SNS>
-          <SNS></SNS>
-          <SNS></SNS>
+          <SNS
+            img="./images/naver_logo.png"
+            title="Naver"
+            content="Email : k99endus@naver.com"
+          ></SNS>
+          <SNS
+            img="./images/kakaotalk_logo.png"
+            title="Kakao"
+            link="https://open.kakao.com/o/sjXBWYre"
+          ></SNS>
+          <SNS
+            img="./images/tistory_logo.png"
+            title="Tistory"
+            link="https://duyaan.tistory.com"
+          ></SNS>
+          <SNS
+            img="./images/github_logo.png"
+            title="GitHub"
+            link="https://github.com/rkddusen"
+          ></SNS>
+          <SNS
+            img="./images/instagram_logo.png"
+            title="Instagram"
+            link="https://www.instagram.com/duyeon_0915"
+          ></SNS>
         </ContactContent>
       </Article>
     </StyledContact>
