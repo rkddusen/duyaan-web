@@ -1,29 +1,51 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
+import IntersectionObserver from "../IntersectionObserver";
 
 function Project(props) {
   const { style, img, title, explain, link, git } = props;
   return (
     <StyledProject style={style}>
-      <div>
-        <StyledImg src={img} alt={title} width="100%" height="300px"/>
-      </div>
-      <ProjectExplain>
-        <ProjectTitle>{title}</ProjectTitle>
-        <p>{explain}</p>
-        <p>{link ? <a href={link} target="_blank">바로 가기</a> : null}</p>
-        <p>{git ? <a href={git} target="_blank">GitHub 링크</a> : null}</p>
-      </ProjectExplain>
+      <IntersectionObserver>
+        <ProjectContent>
+        <div>
+          <StyledImg src={img} alt={title} width="100%" height="300px" />
+        </div>
+        <ProjectExplain>
+          <ProjectTitle>{title}</ProjectTitle>
+          <p>{explain}</p>
+          <p>
+            {link ? (
+              <a href={link} target="_blank">
+                바로 가기
+              </a>
+            ) : null}
+          </p>
+          <p>
+            {git ? (
+              <a href={git} target="_blank">
+                GitHub 링크
+              </a>
+            ) : null}
+          </p>
+        </ProjectExplain>
+        </ProjectContent>
+      </IntersectionObserver>
     </StyledProject>
   );
 }
 const StyledProject = styled.div`
   width: 510px;
   height: 660px;
+  position: absolute;
+`;
+const ProjectContent = styled.div`
+  width: 510px;
+  height: 660px;
   padding: 20px;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgb(0,0,0,0.25);
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.25);
   position: absolute;
   display: flex;
   flex-direction: column;
