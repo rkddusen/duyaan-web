@@ -57,7 +57,7 @@ function Projects() {
 
 const StyledProjects = styled.div`
   width: 100%;
-  background-color: #fafafa;
+  background-color: ${props => props.theme.bg_2};
 `;
 const Article = styled.div`
   width: 1240px;

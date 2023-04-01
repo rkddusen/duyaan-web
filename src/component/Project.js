@@ -43,7 +43,7 @@ const ProjectContent = styled.div`
   width: 510px;
   height: 660px;
   padding: 20px;
-  background-color: white;
+  background-color: ${props => props.theme.bg_con};
   border-radius: 20px;
   box-shadow: 0 5px 15px rgb(0, 0, 0, 0.25);
   position: absolute;
@@ -53,8 +53,9 @@ const ProjectContent = styled.div`
 const StyledImg = styled.img`
   width: 100%;
   height: 300px;
-  border: 1px solid #dddddd;
+  border: 1px solid lightgray;
   border-radius: 20px;
+  opacity: 80%
 `;
 const ProjectExplain = styled.div`
   margin-top: 20px;
