@@ -1,19 +1,23 @@
 import './App.css';
-import { useState } from 'react';
 import Header from './component/Header';
 import Section from'./component/Section';
 import Footer from './component/Footer';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import reset from "styled-reset";
 import { lightTheme, darkTheme } from './theme/theme';
+import { useTheme } from './hooks/useTheme';
 
 function App() {
-  const theme = lightTheme;
+  const [themeMode, setThemeMode] = useTheme();
+  const theme = themeMode === 'dark' ? darkTheme : lightTheme;
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <StyledApp>
-        <Header></Header>
+        <Header
+          themeMode={themeMode}
+          setThemeMode={setThemeMode}
+        ></Header>
         <Section></Section>
         <Footer></Footer>
       </StyledApp>

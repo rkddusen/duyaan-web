@@ -38,17 +38,22 @@ const StyledSun = styled.svg`
   left: 3px;
   top: 2px;
   stroke: ${props => props.theme.color};
-  display: ${props => props.theme.mode === 'light' ? null : "none"};
+  visibility: ${props => props.theme.mode === 'light' ? 'visible' : "hidden"};
+  opacity:${props => props.theme.mode === 'light' ? 1 : 0};
+  transition: opacity 0.3s ease-in-out;
 `;
 const StyledMoon = styled.svg`
   position: absolute;
   right: 3px;
   top: 2px;
   stroke: ${props => props.theme.color};
-  display: ${props => props.theme.mode === 'dark' ? null : "none"};
+  visibility: ${props => props.theme.mode === 'dark' ? 'visible' : "hidden"};
+  opacity:${props => props.theme.mode === 'dark' ? 1 : 0};
+  transition: opacity 0.3s ease-in-out;
 `;
 
-function Header() {
+function Header(props) {
+  const { themeMode, setThemeMode } = props;
   return (
     <StyledHeader>
       <StyledNav>
@@ -62,7 +67,10 @@ function Header() {
             <NavLi onClick={()=>window.location.replace('#contact')}>Contact</NavLi>
           </NavUl>
           <NavDark>
-            <DarkToggle>
+            <DarkToggle onClick={() => {
+              setThemeMode(themeMode === 'dark' ? 'light' : 'dark');
+              window.localStorage.setItem("themeMode", themeMode === 'dark' ? 'light' : 'dark')
+            }}>
               <Sun />
               <Moon />
             </DarkToggle>
@@ -91,8 +99,8 @@ const StyledNav = styled.div`
   align-items: center;
 `;
 const NavImg = styled.div`
-  width: 140px;
-  height: 35px;
+  width: 168px;
+  height: 42px;
   background-image: url(${props => props.theme.logo});
   background-size: contain;
   background-repeat: no-repeat;
