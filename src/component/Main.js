@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function Main() {
   return (
     <StyledMain>
-      <MainImg width="80%" src='./images/main.png' alt='main 이미지' />
+      <MainImg />
       <MainExplain>
         <MainExplainRe>
           <MainExplainAb>
@@ -17,16 +17,17 @@ function Main() {
   );
 }
 const StyledMain = styled.div`
-  background-color: #f1f1f1;
   width: 100%;
   height: 100vh;
   position: relative;
 `;
-const MainImg = styled.img`
-position: absolute;
+const MainImg = styled.div`
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-image: url(${props => props.theme.main});
+  background-size: cover;
+  background-position: center;
 `;
 const MainExplain = styled.div`
   position: absolute;

@@ -2,56 +2,63 @@ import React from "react";
 import styled from 'styled-components';
 
 
-const Sun = ({ size = 22, color = "#000000" }) => (
-  <svg
+const Sun = ({ size = 22 }) => (
+  <StyledSun
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     viewBox="0 0 24 24"
     fill="none"
-    stroke={color}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    style={{
-      position: "absolute",
-      left: "3px",
-      top: "2px"
-    }}
   >
     <circle cx="12" cy="12" r="5" />
     <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
-  </svg>
+  </StyledSun>
 );
 
-const Moon = ({ size = 22, color = "#000000" }) => (
-  <svg
+const Moon = ({ size = 22 }) => (
+  <StyledMoon
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     viewBox="0 0 24 24"
     fill="none"
-    stroke={color}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    style={{
-      position: "absolute",
-      right: "3px",
-      top: "2px",
-      display: 'none'
-    }}
   >
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-  </svg>
+  </StyledMoon>
 );
 
-function Header() {
+const StyledSun = styled.svg`
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  stroke: ${props => props.theme.color};
+  visibility: ${props => props.theme.mode === 'light' ? 'visible' : "hidden"};
+  opacity:${props => props.theme.mode === 'light' ? 1 : 0};
+  transition: opacity 0.3s ease-in-out;
+`;
+const StyledMoon = styled.svg`
+  position: absolute;
+  right: 3px;
+  top: 2px;
+  stroke: ${props => props.theme.color};
+  visibility: ${props => props.theme.mode === 'dark' ? 'visible' : "hidden"};
+  opacity:${props => props.theme.mode === 'dark' ? 1 : 0};
+  transition: opacity 0.3s ease-in-out;
+`;
+
+function Header(props) {
+  const { themeMode, setThemeMode } = props;
   return (
     <StyledHeader>
       <StyledNav>
         <div>
-          <NavImg src="./images/logo.png" onClick={() => window.location.reload()} />
+          <NavImg onClick={() => window.location.reload()} />
         </div>
         <NavRight>
           <NavUl>
@@ -60,7 +67,10 @@ function Header() {
             <NavLi onClick={()=>window.location.replace('#contact')}>Contact</NavLi>
           </NavUl>
           <NavDark>
-            <DarkToggle>
+            <DarkToggle onClick={() => {
+              setThemeMode(themeMode === 'dark' ? 'light' : 'dark');
+              window.localStorage.setItem("themeMode", themeMode === 'dark' ? 'light' : 'dark')
+            }}>
               <Sun />
               <Moon />
             </DarkToggle>
@@ -77,7 +87,7 @@ const StyledHeader = styled.div`
   top: 0;
   width: 100%;
   z-index: 1;
-  background-color: white;
+  background-color: ${props => props.theme.bg_1};
 `;
 
 const StyledNav = styled.div`
@@ -88,8 +98,13 @@ const StyledNav = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const NavImg = styled.img`
-  height: 35px;
+const NavImg = styled.div`
+  width: 168px;
+  height: 42px;
+  background-image: url(${props => props.theme.logo});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
   &:hover{
     cursor: pointer;
   }
@@ -104,7 +119,7 @@ const NavUl = styled.ul`
 `;
 const NavLi = styled.li`
   margin-left: 50px;
-  font-size: 23px;
+  font-size: 20px;
 
   &:hover{
     cursor: pointer;
@@ -116,7 +131,7 @@ const NavDark = styled.div`
 const DarkToggle = styled.div`
   width: 60px;
   height: 26px;
-  border: 1px solid black;
+  border: 1px solid ${props => props.theme.color};
   border-radius: 20px;
   position: relative;
 `;

@@ -185,6 +185,7 @@ const BoxImg = styled.img`
   height: 300px;
   border-radius: 20px;
   box-shadow: 0px 5px 15px rgb(0, 0, 0, 0.25);
+  background-color: ${props => props.theme.bg_con};
 `;
 const BoxExplain = styled.div`
   padding: 20px;

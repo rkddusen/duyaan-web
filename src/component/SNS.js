@@ -27,6 +27,7 @@ const StyledSNS = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: ${props => props.theme.bg_con};
 `;
 const SNSDetail = styled.div`
   margin-top: 20px;
