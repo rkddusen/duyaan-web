@@ -34,6 +34,11 @@ const StyledSNS = styled.div`
     height: 160px;
     margin-top: 80px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    width: 300px;
+    height: 140px;
+    margin-top: 60px;
+  }
 `;
 
 const SNSImg = styled.img`
@@ -44,6 +49,10 @@ const SNSImg = styled.img`
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 70px;
     height: 70px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    width: 50px;
+    height: 50px;
   }
 `;
 const SNSDetail = styled.div`

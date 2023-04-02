@@ -40,6 +40,9 @@ const MainExplain = styled.div`
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 964px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    width: 708px;
+  }
 `;
 const MainExplainRe = styled.div`
   position: relative;
@@ -55,13 +58,16 @@ const MainExplainAb = styled.div`
   transform: translate(0,-50%);
 `;
 const Sentence = styled.p`
-  font-size: 70px;
+  font-size: 60px;
   line-height: 1.5;
   letter-spacing: 10px;
   font-weight: 500;
 
   @media screen and (min-width: 1024px) and (max-width: 1200px){
-    font-size: 60px;
+    font-size: 50px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    font-size: 45px;
   }
 `;
 

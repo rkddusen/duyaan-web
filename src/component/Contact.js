@@ -55,6 +55,9 @@ const Article = styled.div`
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 964px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    width: 708px;
+  }
 `;
 const ContactTitle = styled.div`
   padding: 120px 0;
@@ -73,6 +76,9 @@ const ContactContent = styled.div`
 
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     margin-top: -80px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    margin-top: -60px;
   }
 `;
 

@@ -40,9 +40,14 @@ const StyledProject = styled.div`
   box-sizing: border-box;
   position: absolute;
 
-  @media screen and (min-width: 1024px) and (max-width: 1200px){
+  @media screen and (min-width: 768px) and (max-width: 1200px){ // 768 ~ 1024 ~ 1200
     width: 450px;
     height: 580px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    position: unset;
+    margin: 0 auto;
+    margin-bottom: 60px;
   }
 `;
 const ProjectContent = styled.div`
@@ -57,7 +62,7 @@ const ProjectContent = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 1024px) and (max-width: 1200px){
+  @media screen and (min-width: 768px) and (max-width: 1200px){ // 768 ~ 1024 ~ 1200
     width: 450px;
     height: 580px;
   }
@@ -69,7 +74,7 @@ const StyledImg = styled.img`
   border-radius: 20px;
   opacity: 80%;
 
-  @media screen and (min-width: 1024px) and (max-width: 1200px){
+  @media screen and (min-width: 768px) and (max-width: 1200px){ // 768 ~ 1024 ~ 1200
     height: 230px;
   }
 `;

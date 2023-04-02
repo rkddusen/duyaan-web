@@ -46,6 +46,9 @@ const StyledProgress = styled.progress`
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 300px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    width: 250px;
+  }
 `;
 
 function About() {
@@ -162,6 +165,9 @@ const Article = styled.div`
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 964px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    width: 708px;
+  }
 `;
 const AboutTitle = styled.div`
   padding: 120px 0;
@@ -190,7 +196,11 @@ const BoxImg = styled.img`
 
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 250px;
-  height: 250px;
+    height: 250px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    width: 200px;
+    height: 200px;
   }
 `;
 const BoxExplain = styled.div`

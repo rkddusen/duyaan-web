@@ -66,6 +66,9 @@ const Article = styled.div`
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 964px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    width: 708px;
+  }
 `;
 const ProjectsTitle = styled.div`
   padding: 120px 0;
@@ -77,9 +80,13 @@ const Title = styled.p`
 const ProjectsContent = styled.div`
   width: 100%;
   padding-bottom: 200px;
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    padding-bottom: 140px;
+  }
 `;
 const ProjectsList = styled.div`
-  height: 900px;
+  min-height: 900px;
   position: relative;
+  
 `;
 export default Projects;
