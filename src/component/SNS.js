@@ -6,7 +6,7 @@ function SNS(props){
   return(
     <StyledSNS>
       <div>
-        <img src={img} alt={title} width="80px" height="80px"/>
+        <SNSImg src={img} alt={title}/>
       </div>
       <SNSDetail>
         <SNSTitle>{title}</SNSTitle>
@@ -17,10 +17,10 @@ function SNS(props){
 }
 
 const StyledSNS = styled.div`
-  width: 510px;
-  height: 210px;
+  width: 480px;
+  height: 180px;
   padding: 20px;
-  margin: 0 0 100px 0;
+  margin-top: 100px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgb(0,0,0,0.25);
   display: flex;
@@ -28,6 +28,23 @@ const StyledSNS = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${props => props.theme.bg_con};
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 400px;
+    height: 160px;
+    margin-top: 80px;
+  }
+`;
+
+const SNSImg = styled.img`
+  width: 80px;
+  height: 80px;
+  
+  
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 70px;
+    height: 70px;
+  }
 `;
 const SNSDetail = styled.div`
   margin-top: 20px;

@@ -91,12 +91,15 @@ const StyledHeader = styled.div`
 `;
 
 const StyledNav = styled.div`
-  width: 1240px;
+  width: 1140px;
   height: 100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 964px;
+  }
 `;
 const NavImg = styled.div`
   width: 168px;

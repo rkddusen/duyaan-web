@@ -60,8 +60,12 @@ const StyledProjects = styled.div`
   background-color: ${props => props.theme.bg_2};
 `;
 const Article = styled.div`
-  width: 1240px;
+  width: 1140px;
   margin: 0 auto;
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 964px;
+  }
 `;
 const ProjectsTitle = styled.div`
   padding: 120px 0;

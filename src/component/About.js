@@ -29,7 +29,7 @@ const Subject = styled.span`
 `;
 const StyledProgress = styled.progress`
   appearance: none;
-  width: 300px;
+  width: 350px;
   margin: 5px;
 
   &::-webkit-progress-bar {
@@ -41,6 +41,10 @@ const StyledProgress = styled.progress`
     border-radius: 5px;
     background: -webkit-linear-gradient(to right, #888888, #333333);
     background: linear-gradient(to right, #888888, #333333);
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 300px;
   }
 `;
 
@@ -64,8 +68,6 @@ function About() {
               <BoxImg
                 src="./images/profile.jpeg"
                 alt="profile 이미지"
-                width="300px"
-                height="300px"
                 style={{ marginRight: "60px" }}
               />
               <BoxExplain>
@@ -108,8 +110,6 @@ function About() {
               <BoxImg
                 src="./images/career.png"
                 alt="career 이미지"
-                width="300px"
-                height="300px"
                 style={{ marginLeft: "60px" }}
               />
             </Box>
@@ -119,8 +119,6 @@ function About() {
               <BoxImg
                 src="./images/skills.png"
                 alt="skills 이미지"
-                width="300px"
-                height="300px"
                 style={{ marginRight: "60px" }}
               />
               <BoxExplain>
@@ -159,8 +157,11 @@ const StyledAbout = styled.div`
   width: 100%;
 `;
 const Article = styled.div`
-  width: 1240px;
+  width: 1140px;
   margin: 0 auto;
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 964px;
+  }
 `;
 const AboutTitle = styled.div`
   padding: 120px 0;
@@ -186,6 +187,11 @@ const BoxImg = styled.img`
   border-radius: 20px;
   box-shadow: 0px 5px 15px rgb(0, 0, 0, 0.25);
   background-color: ${props => props.theme.bg_con};
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 250px;
+  height: 250px;
+  }
 `;
 const BoxExplain = styled.div`
   padding: 20px;

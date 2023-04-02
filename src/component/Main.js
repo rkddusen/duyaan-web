@@ -31,11 +31,15 @@ const MainImg = styled.div`
 `;
 const MainExplain = styled.div`
   position: absolute;
-  width: 1240px;
+  width: 1140px;
   height: 100%;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 964px;
+  }
 `;
 const MainExplainRe = styled.div`
   position: relative;
@@ -51,10 +55,14 @@ const MainExplainAb = styled.div`
   transform: translate(0,-50%);
 `;
 const Sentence = styled.p`
-  font-size: 80px;
+  font-size: 70px;
   line-height: 1.5;
   letter-spacing: 10px;
   font-weight: 500;
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    font-size: 60px;
+  }
 `;
 
 export default Main;

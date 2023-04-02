@@ -35,13 +35,20 @@ function Project(props) {
   );
 }
 const StyledProject = styled.div`
-  width: 510px;
-  height: 660px;
+  width: 540px;
+  height: 700px;
+  box-sizing: border-box;
   position: absolute;
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 450px;
+    height: 580px;
+  }
 `;
 const ProjectContent = styled.div`
-  width: 510px;
-  height: 660px;
+  width: 540px;
+  height: 700px;
+  box-sizing: border-box;
   padding: 20px;
   background-color: ${props => props.theme.bg_con};
   border-radius: 20px;
@@ -49,13 +56,22 @@ const ProjectContent = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 450px;
+    height: 580px;
+  }
 `;
 const StyledImg = styled.img`
   width: 100%;
   height: 300px;
   border: 1px solid lightgray;
   border-radius: 20px;
-  opacity: 80%
+  opacity: 80%;
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    height: 230px;
+  }
 `;
 const ProjectExplain = styled.div`
   margin-top: 20px;
