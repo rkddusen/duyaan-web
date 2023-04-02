@@ -49,6 +49,13 @@ const StyledProject = styled.div`
     margin: 0 auto;
     margin-bottom: 60px;
   }
+  @media screen and (max-width: 768px){
+    position: unset;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 500px;
+  }
 `;
 const ProjectContent = styled.div`
   width: 540px;
@@ -66,6 +73,10 @@ const ProjectContent = styled.div`
     width: 450px;
     height: 580px;
   }
+  @media screen and (max-width: 768px){ // ~ 768
+    width: 300px;
+    height: 500px;
+  }
 `;
 const StyledImg = styled.img`
   width: 100%;
@@ -76,6 +87,9 @@ const StyledImg = styled.img`
 
   @media screen and (min-width: 768px) and (max-width: 1200px){ // 768 ~ 1024 ~ 1200
     height: 230px;
+  }
+  @media screen and (max-width: 768px){ // ~ 768
+    height: 180px;
   }
 `;
 const ProjectExplain = styled.div`

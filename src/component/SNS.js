@@ -20,6 +20,8 @@ const StyledSNS = styled.div`
   width: 480px;
   height: 180px;
   padding: 20px;
+
+  margin: 0 auto;
   margin-top: 100px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgb(0,0,0,0.25);
@@ -39,6 +41,11 @@ const StyledSNS = styled.div`
     height: 140px;
     margin-top: 60px;
   }
+  @media screen and (max-width: 768px){
+    width: 100%;
+    height: 120px;
+    margin-top: 30px;
+  }
 `;
 
 const SNSImg = styled.img`
@@ -50,7 +57,7 @@ const SNSImg = styled.img`
     width: 70px;
     height: 70px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1024px){
+  @media screen and (max-width: 1024px){
     width: 50px;
     height: 50px;
   }

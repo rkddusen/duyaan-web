@@ -43,6 +43,10 @@ const MainExplain = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1024px){
     width: 708px;
   }
+  @media screen and (max-width: 768px){
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
 `;
 const MainExplainRe = styled.div`
   position: relative;
@@ -68,6 +72,9 @@ const Sentence = styled.p`
   }
   @media screen and (min-width: 768px) and (max-width: 1024px){
     font-size: 45px;
+  }
+  @media screen and (max-width: 768px){
+    font-size: 40px;
   }
 `;
 

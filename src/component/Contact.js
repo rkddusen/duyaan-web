@@ -58,6 +58,10 @@ const Article = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1024px){
     width: 708px;
   }
+  @media screen and (max-width: 768px){
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
 `;
 const ContactTitle = styled.div`
   padding: 120px 0;
@@ -79,6 +83,9 @@ const ContactContent = styled.div`
   }
   @media screen and (min-width: 768px) and (max-width: 1024px){
     margin-top: -60px;
+  }
+  @media screen and (max-width: 768px){
+    margin-top: -30px;
   }
 `;
 

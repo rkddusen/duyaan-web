@@ -69,6 +69,10 @@ const Article = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1024px){
     width: 708px;
   }
+  @media screen and (max-width: 768px){
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
 `;
 const ProjectsTitle = styled.div`
   padding: 120px 0;

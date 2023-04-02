@@ -2,6 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import IntersectionObserver from "../IntersectionObserver";
 
+export function Profile(props) {
+  const { title, content } = props;
+  return (
+    <>
+      <PTitle>{title}</PTitle>
+      {content}
+    </>
+  );
+}
+const PTitle = styled.span`
+  min-width: 80px;
+`;
+
 export function Career(props) {
   const { date, text } = props;
   return (
@@ -49,6 +62,9 @@ const StyledProgress = styled.progress`
   @media screen and (min-width: 768px) and (max-width: 1024px){
     width: 250px;
   }
+  @media screen and (max-width: 768px){
+    width: 250px;
+  }
 `;
 
 function About() {
@@ -67,25 +83,27 @@ function About() {
             </IntersectionObserver>
           </div>
           <IntersectionObserver>
-            <Box justify="start">
+            <Box>
               <BoxImg
                 src="./images/profile.jpeg"
                 alt="profile 이미지"
-                style={{ marginRight: "60px" }}
               />
               <BoxExplain>
                 <Boxtitle>Profile</Boxtitle>
-                <BoxDetail>이름 : 강두연</BoxDetail>
-                <BoxDetail>성별 : 남자</BoxDetail>
-                <BoxDetail>생년월일 : 1999.06.30</BoxDetail>
-                <BoxDetail>학력 : 건국대학교 재학 중</BoxDetail>
-                <BoxDetail>주소 : 경기도 성남시 분당구</BoxDetail>
-                <BoxDetail>좌우명 : </BoxDetail>
+                <BoxDetail><Profile title="이름" content="강두연"></Profile></BoxDetail>
+                <BoxDetail><Profile title="성별" content="남자"></Profile></BoxDetail>
+                <BoxDetail><Profile title="생년월일" content="1999.06.30"></Profile></BoxDetail>
+                <BoxDetail><Profile title="학력" content="건국대학교 재학 중"></Profile></BoxDetail>
+                <BoxDetail><Profile title="주소" content="경기도 성남시 분당구"></Profile></BoxDetail>
+                <BoxDetail><Profile title="좌우명" content=""></Profile></BoxDetail>
               </BoxExplain>
             </Box>
           </IntersectionObserver>
           <IntersectionObserver>
-            <Box justify="end">
+            <Box><BoxImg
+                src="./images/career.png"
+                alt="career 이미지"
+              />
               <BoxExplain>
                 <Boxtitle>Career</Boxtitle>
                 <BoxDetail>
@@ -110,19 +128,14 @@ function About() {
                   <Career date="2022.03 - 2022.12" text="2022년 sw활동 장학2" />
                 </BoxDetail>
               </BoxExplain>
-              <BoxImg
-                src="./images/career.png"
-                alt="career 이미지"
-                style={{ marginLeft: "60px" }}
-              />
+              
             </Box>
           </IntersectionObserver>
           <IntersectionObserver>
-            <Box justify="start">
+            <Box>
               <BoxImg
                 src="./images/skills.png"
                 alt="skills 이미지"
-                style={{ marginRight: "60px" }}
               />
               <BoxExplain>
                 <Boxtitle>Skills</Boxtitle>
@@ -168,6 +181,10 @@ const Article = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1024px){
     width: 708px;
   }
+  @media screen and (max-width: 768px){
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
 `;
 const AboutTitle = styled.div`
   padding: 120px 0;
@@ -185,7 +202,12 @@ const OneSentence = styled.div`
 const Box = styled.div`
   margin: 50px 0 100px 0;
   display: flex;
-  justify-content: ${(props) => props.justify};
+  justify-content: start;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const BoxImg = styled.img`
   width: 300px;
@@ -193,18 +215,26 @@ const BoxImg = styled.img`
   border-radius: 20px;
   box-shadow: 0px 5px 15px rgb(0, 0, 0, 0.25);
   background-color: ${props => props.theme.bg_con};
+  margin-right: 60px;
 
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 250px;
     height: 250px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1024px){
+  @media screen and (max-width: 1024px){
     width: 200px;
     height: 200px;
+  }
+  @media screen and (max-width: 768px){
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
 const BoxExplain = styled.div`
   padding: 20px;
+  @media screen and (max-width: 768px){
+    text-align: center;
+  }
 `;
 const Boxtitle = styled.p`
   font-size: 20px;
@@ -215,6 +245,10 @@ const BoxDetail = styled.p`
   font-size: 16px;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    margin: 20px 0;
+  }
 `;
 
 export default About;

@@ -103,6 +103,11 @@ const StyledNav = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1024px){
     width: 708px;
   }
+  @media screen and (max-width: 768px){
+    width: calc(100% - 60px);
+    height: 50px;
+    margin: 0 30px;
+  }
 `;
 const NavImg = styled.div`
   width: 168px;
@@ -114,6 +119,10 @@ const NavImg = styled.div`
   &:hover{
     cursor: pointer;
   }
+  @media screen and (max-width: 768px){
+    width: 140px;
+    height: 35px;
+  }
 `;
 const NavRight = styled.div`
   display: flex;
@@ -122,6 +131,9 @@ const NavRight = styled.div`
 `;
 const NavUl = styled.ul`
   display: flex;
+  @media screen and (max-width: 768px){
+    display: none;
+  }
 `;
 const NavLi = styled.li`
   margin-left: 50px;
