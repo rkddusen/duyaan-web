@@ -20,5 +20,8 @@ const FooterContent = styled.div`
   text-align: center;
   padding: 50px 0;
   line-height: 30px;
+  @media screen and (max-width: 768px){
+    font-size: 12px;
+  }
 `;
 export default Footer;

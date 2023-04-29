@@ -91,12 +91,23 @@ const StyledHeader = styled.div`
 `;
 
 const StyledNav = styled.div`
-  width: 1240px;
+  width: 1140px;
   height: 100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+    width: 964px;
+  }
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+    width: 708px;
+  }
+  @media screen and (max-width: 768px){
+    width: calc(100% - 60px);
+    height: 50px;
+    margin: 0 30px;
+  }
 `;
 const NavImg = styled.div`
   width: 168px;
@@ -108,6 +119,10 @@ const NavImg = styled.div`
   &:hover{
     cursor: pointer;
   }
+  @media screen and (max-width: 768px){
+    width: 140px;
+    height: 35px;
+  }
 `;
 const NavRight = styled.div`
   display: flex;
@@ -116,17 +131,20 @@ const NavRight = styled.div`
 `;
 const NavUl = styled.ul`
   display: flex;
+  @media screen and (max-width: 768px){
+    display: none;
+  }
 `;
 const NavLi = styled.li`
   margin-left: 50px;
-  font-size: 20px;
+  font-size: 18px;
 
   &:hover{
     cursor: pointer;
   }
 `;
 const NavDark = styled.div`
-  margin-left: 100px;
+  margin-left: 60px;
 `;
 const DarkToggle = styled.div`
   width: 60px;

@@ -1,15 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import IntersectionObserver from "../IntersectionObserver";
 
 function Project(props) {
   const { style, img, title, explain, link, git } = props;
   return (
     <StyledProject style={style}>
-      <IntersectionObserver>
-        <ProjectContent>
         <div>
-          <StyledImg src={img} alt={title} width="100%" height="300px" />
+          <StyledImg src={img} alt={title} />
         </div>
         <ProjectExplain>
           <ProjectTitle>{title}</ProjectTitle>
@@ -29,19 +26,12 @@ function Project(props) {
             ) : null}
           </p>
         </ProjectExplain>
-        </ProjectContent>
-      </IntersectionObserver>
     </StyledProject>
   );
 }
 const StyledProject = styled.div`
-  width: 510px;
-  height: 660px;
-  position: absolute;
-`;
-const ProjectContent = styled.div`
-  width: 510px;
-  height: 660px;
+  width: 540px;
+  box-sizing: border-box;
   padding: 20px;
   background-color: ${props => props.theme.bg_con};
   border-radius: 20px;
@@ -49,13 +39,28 @@ const ProjectContent = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 768px) and (max-width: 1200px){ // 768 ~ 1024 ~ 1200
+    width: 450px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    position: unset;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 768px){
+    position: unset;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 100%;
+  }
 `;
 const StyledImg = styled.img`
   width: 100%;
-  height: 300px;
   border: 1px solid lightgray;
   border-radius: 20px;
-  opacity: 80%
+  opacity: 80%;
+
 `;
 const ProjectExplain = styled.div`
   margin-top: 20px;
