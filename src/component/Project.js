@@ -1,15 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import IntersectionObserver from "../IntersectionObserver";
 
 function Project(props) {
   const { style, img, title, explain, link, git } = props;
   return (
     <StyledProject style={style}>
-      <IntersectionObserver>
-        <ProjectContent>
         <div>
-          <StyledImg src={img} alt={title} width="100%" height="300px" />
+          <StyledImg src={img} alt={title} />
         </div>
         <ProjectExplain>
           <ProjectTitle>{title}</ProjectTitle>
@@ -29,37 +26,11 @@ function Project(props) {
             ) : null}
           </p>
         </ProjectExplain>
-        </ProjectContent>
-      </IntersectionObserver>
     </StyledProject>
   );
 }
 const StyledProject = styled.div`
   width: 540px;
-  height: 700px;
-  box-sizing: border-box;
-  position: absolute;
-
-  @media screen and (min-width: 768px) and (max-width: 1200px){ // 768 ~ 1024 ~ 1200
-    width: 450px;
-    height: 580px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1024px){
-    position: unset;
-    margin: 0 auto;
-    margin-bottom: 60px;
-  }
-  @media screen and (max-width: 768px){
-    position: unset;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    width: 300px;
-    height: 500px;
-  }
-`;
-const ProjectContent = styled.div`
-  width: 540px;
-  height: 700px;
   box-sizing: border-box;
   padding: 20px;
   background-color: ${props => props.theme.bg_con};
@@ -71,26 +42,25 @@ const ProjectContent = styled.div`
 
   @media screen and (min-width: 768px) and (max-width: 1200px){ // 768 ~ 1024 ~ 1200
     width: 450px;
-    height: 580px;
   }
-  @media screen and (max-width: 768px){ // ~ 768
-    width: 300px;
-    height: 500px;
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    position: unset;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 768px){
+    position: unset;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 100%;
   }
 `;
 const StyledImg = styled.img`
   width: 100%;
-  height: 300px;
   border: 1px solid lightgray;
   border-radius: 20px;
   opacity: 80%;
 
-  @media screen and (min-width: 768px) and (max-width: 1200px){ // 768 ~ 1024 ~ 1200
-    height: 230px;
-  }
-  @media screen and (max-width: 768px){ // ~ 768
-    height: 180px;
-  }
 `;
 const ProjectExplain = styled.div`
   margin-top: 20px;

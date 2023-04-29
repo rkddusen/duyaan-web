@@ -23,21 +23,25 @@ function Contact() {
               img="./images/kakaotalk_logo.png"
               title="Kakao"
               link="https://open.kakao.com/o/sjXBWYre"
+              content="카카오톡 오픈채팅 >"
             ></SNS>
             <SNS
               img="./images/tistory_logo.png"
               title="Tistory"
               link="https://duyaan.tistory.com"
+              content="Tistory로 이동하기 >"
             ></SNS>
             <SNS
               img="./images/github_logo.png"
               title="GitHub"
               link="https://github.com/rkddusen"
+              content="GitHub으로 이동하기 >"
             ></SNS>
             <SNS
               img="./images/instagram_logo.png"
               title="Instagram"
               link="https://www.instagram.com/duyeon_0915"
+              content="Instagram으로 이동하기 >"
             ></SNS>
           </ContactContent>
         </IntersectionObserver>

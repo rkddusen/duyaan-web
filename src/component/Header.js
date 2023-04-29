@@ -100,7 +100,7 @@ const StyledNav = styled.div`
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 964px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1024px){
+    @media screen and (min-width: 768px) and (max-width: 1024px){
     width: 708px;
   }
   @media screen and (max-width: 768px){

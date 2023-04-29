@@ -13,6 +13,8 @@ export function Profile(props) {
 }
 const PTitle = styled.span`
   min-width: 80px;
+  font-weight: bold;
+  margin: 3px;
 `;
 
 export function Career(props) {
@@ -26,6 +28,8 @@ export function Career(props) {
 }
 const Date = styled.span`
   min-width: 150px;
+  font-weight: bold;
+  margin: 3px;
 `;
 
 export function Skills(props) {
@@ -43,10 +47,11 @@ const Subject = styled.span`
 const StyledProgress = styled.progress`
   appearance: none;
   width: 350px;
-  margin: 5px;
+  margin: 3px;
 
   &::-webkit-progress-bar {
     background: #f0f0f0;
+    height: 12px;
     border-radius: 5px;
     box-shadow: inset 3px 3px 10px #ccc;
   }
@@ -79,7 +84,7 @@ function About() {
         <AboutContent>
           <div>
             <IntersectionObserver>
-              <OneSentence>'Artistic Developer'</OneSentence>
+              <OneSentence>" Artistic Developer "</OneSentence>
             </IntersectionObserver>
           </div>
           <IntersectionObserver>

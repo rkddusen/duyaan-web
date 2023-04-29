@@ -10,7 +10,7 @@ function SNS(props){
       </div>
       <SNSDetail>
         <SNSTitle>{title}</SNSTitle>
-        <p>{link ? <a href={link} target="_blank">바로 가기</a> : content}</p>
+        <SNSContent>{link ? <SNSLink href={link} target="_blank">{content}</SNSLink> : content}</SNSContent>
       </SNSDetail>
     </StyledSNS>
   );
@@ -69,6 +69,13 @@ const SNSDetail = styled.div`
 const SNSTitle = styled.p`
   font-size: 20px;
   margin-bottom: 5px;
+`;
+const SNSContent = styled.p`
+  font-size: 14px;
+  margin-top: 10px;
+`;
+const SNSLink = styled.a`
+  color: unset;
 `;
 
 export default SNS;

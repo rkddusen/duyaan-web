@@ -5,7 +5,7 @@ export const lightTheme = {
   color: '#060606',
   mode: 'light',
   logo: './images/light/logo.png',
-  main: './images/light/main.png',
+  main: './images/light/mainimg.jpg',
 }
 export const darkTheme = {
     bg_1: '#060606',
@@ -14,7 +14,7 @@ export const darkTheme = {
     color: '#fafafa',
     mode: 'dark',
     logo: './images/dark/logo.png',
-    main: './images/dark/main.png',
+    main: './images/dark/mainimg.jpg',
 }
 
 export default { lightTheme, darkTheme };
