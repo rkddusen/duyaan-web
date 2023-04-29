@@ -42,7 +42,7 @@ function Projects() {
             ></Project>
             <Project
               style={{ top: "200px", right: "0" }}
-              img=""
+              img="./images/duyaan-web.png"
               title="Duyaan-Web"
               explain="Duyaan-Web 설명"
               link=""

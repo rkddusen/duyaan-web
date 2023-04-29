@@ -203,6 +203,9 @@ const AboutContent = styled.div`
 `;
 const OneSentence = styled.div`
   font-size: 30px;
+  @media screen and (max-width: 768px){
+    text-align: center;
+  }
 `;
 const Box = styled.div`
   margin: 50px 0 100px 0;

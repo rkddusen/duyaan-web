@@ -6,6 +6,7 @@ export const lightTheme = {
   mode: 'light',
   logo: './images/light/logo.png',
   main: './images/light/mainimg.jpg',
+  git: './images/light/github_logo.png',
 }
 export const darkTheme = {
     bg_1: '#060606',
@@ -15,6 +16,7 @@ export const darkTheme = {
     mode: 'dark',
     logo: './images/dark/logo.png',
     main: './images/dark/mainimg.jpg',
+    git: './images/dark/githubwhite_logo.png',
 }
 
 export default { lightTheme, darkTheme };
