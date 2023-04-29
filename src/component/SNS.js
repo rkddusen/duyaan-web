@@ -51,7 +51,7 @@ const StyledSNS = styled.div`
 const SNSImg = styled.img`
   width: 80px;
   height: 80px;
-  
+  border-radius: 10px;
   
   @media screen and (min-width: 1024px) and (max-width: 1200px){
     width: 70px;
