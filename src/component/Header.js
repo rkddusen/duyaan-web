@@ -58,7 +58,7 @@ function Header(props) {
     <StyledHeader>
       <StyledNav>
         <div>
-          <NavImg onClick={() => window.location.reload()} />
+          <NavImg onClick={() => window.location.replace('/')} />
         </div>
         <NavRight>
           <NavUl>
