@@ -1,23 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const Link = ({ size = 18 }) => (
-  <StyledSvg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-  </StyledSvg>
+const Link = ({ size = 22 }) => (
+  <StyledSvg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><g fill="none" fill-rule="evenodd"><path d="M18 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h5M15 3h6v6M10 14L20.2 3.8"/></g></StyledSvg>
 );
 const StyledSvg = styled.svg`
-  margin-left: 3px;
   stroke: ${props => props.theme.color};
 `;
 
@@ -25,9 +12,13 @@ function Project(props) {
   const { style, img, title, explain, link, git } = props;
   return (
     <StyledProject style={style}>
-      <div>
-        <StyledImg src={img} alt={title} />
-      </div>
+      <ImgArea>
+        <StyledImg onClick={() => {
+            window.open(link)
+          }}
+          src={img}
+          alt={title} />
+      </ImgArea>
       <ProjectExplain>
         <ProjectTitle>
           {title}
@@ -42,10 +33,7 @@ function Project(props) {
             </a>
           ) : null}
         </ProjectTitle>
-        <p>{explain}</p>
-        <p>
-          
-        </p>
+        <ProjectContents>{explain}</ProjectContents>
       </ProjectExplain>
     </StyledProject>
   );
@@ -77,26 +65,40 @@ const StyledProject = styled.div`
     width: 100%;
   }
 `;
-const StyledImg = styled.img`
-  width: 100%;
+const ImgArea = styled.div`
+  overflow: hidden;
   border: 1px solid lightgray;
   border-radius: 20px;
+
+`;
+const StyledImg = styled.img`
+  width: 100%;
   opacity: 80%;
+
+  &:hover{
+    scale: 1.1;
+    cursor: pointer;
+  }
 `;
 const ProjectExplain = styled.div`
-  margin-top: 20px;
   padding: 20px;
   height: 100%;
 `;
 const ProjectTitle = styled.div`
   font-size: 25px;
   margin-bottom: 10px;
+  & > a{
+    margin-left: 10px;
+  }
+`;
+const ProjectContents = styled.p`
+  white-space: pre-wrap;
+  line-height: 1.5;
 `;
 const GitLogo = styled.div`
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-left: 3px;
+  width: 22px;
+  height: 22px;
   background-image: url(${props => props.theme.git});
   background-size: cover;
   background-position: center;

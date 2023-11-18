@@ -98,9 +98,13 @@ function About() {
                 <BoxDetail><Profile title="이름" content="강두연"></Profile></BoxDetail>
                 <BoxDetail><Profile title="성별" content="남자"></Profile></BoxDetail>
                 <BoxDetail><Profile title="생년월일" content="1999.06.30"></Profile></BoxDetail>
-                <BoxDetail><Profile title="학력" content="건국대학교 재학 중"></Profile></BoxDetail>
+                <BoxDetail><Profile title="학력" content="건국대학교 졸업 예정"></Profile></BoxDetail>
                 <BoxDetail><Profile title="주소" content="경기도 성남시 분당구"></Profile></BoxDetail>
-                <BoxDetail><Profile title="좌우명" content=""></Profile></BoxDetail>
+                <br />
+                <p style={{fontWeight: 'bold', marginLeft: '3px'}}>프론트엔드 지원 동기</p>
+                <Motivation>
+                  {`학부 수업 중 '웹 프로그래밍'을 수강하다가, 디자인을 코드로 변환하는 과정에 빠지게 되었습니다. 이제 우리 일상에서 경험하는 모든 일은 웹을 바탕으로 하고 있습니다. 많은 사람들이 제가 만든 웹 서비스에서 좋은 경험을 얻을 수 있게 하는 프론트엔드 개발자가 되고 싶습니다.`}
+                </Motivation>
               </BoxExplain>
             </Box>
           </IntersectionObserver>
@@ -124,13 +128,13 @@ function About() {
                   />
                 </BoxDetail>
                 <BoxDetail>
-                  <Career date="2019.07 - 2019.12" text="2019년 sw활동 장학1" />
-                </BoxDetail>
-                <BoxDetail>
                   <Career date="2020.05 - 2021.11" text="육군 복무" />
                 </BoxDetail>
                 <BoxDetail>
-                  <Career date="2022.03 - 2022.12" text="2022년 sw활동 장학2" />
+                  <Career date="2022.08" text="2022년 2학기 교내 의조 장학금 수상" />
+                </BoxDetail>
+                <BoxDetail>
+                  <Career date="2023.11" text="2023년도 SW경진대회 참가" />
                 </BoxDetail>
               </BoxExplain>
               
@@ -145,7 +149,7 @@ function About() {
               <BoxExplain>
                 <Boxtitle>Skills</Boxtitle>
                 <BoxDetail>
-                  <Skills subject="Html, CSS" value={80} />
+                  <Skills subject="Html, CSS" value={70} />
                 </BoxDetail>
                 <BoxDetail>
                   <Skills subject="JavaScript" value={80} />
@@ -154,16 +158,10 @@ function About() {
                   <Skills subject="React" value={70} />
                 </BoxDetail>
                 <BoxDetail>
-                  <Skills subject="NodeJS" value={70} />
+                  <Skills subject="NodeJS" value={50} />
                 </BoxDetail>
                 <BoxDetail>
-                  <Skills subject="Java" value={50} />
-                </BoxDetail>
-                <BoxDetail>
-                  <Skills subject="Python" value={50} />
-                </BoxDetail>
-                <BoxDetail>
-                  <Skills subject="MySql" value={80} />
+                  <Skills subject="MySql" value={50} />
                 </BoxDetail>
               </BoxExplain>
             </Box>
@@ -257,6 +255,11 @@ const BoxDetail = styled.p`
     flex-direction: column;
     margin: 20px 0;
   }
+`;
+const Motivation = styled.p`
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-left: 3px;
 `;
 
 export default About;
