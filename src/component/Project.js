@@ -42,10 +42,7 @@ function Project(props) {
             </a>
           ) : null}
         </ProjectTitle>
-        <p>{explain}</p>
-        <p>
-          
-        </p>
+        <ProjectContents>{explain}</ProjectContents>
       </ProjectExplain>
     </StyledProject>
   );
@@ -91,6 +88,10 @@ const ProjectExplain = styled.div`
 const ProjectTitle = styled.div`
   font-size: 25px;
   margin-bottom: 10px;
+`;
+const ProjectContents = styled.p`
+  white-space: pre-wrap;
+  line-height: 1.5;
 `;
 const GitLogo = styled.div`
   display: inline-block;
